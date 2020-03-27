@@ -1,6 +1,6 @@
 {
   "name": "ncons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ncons boost your productivity by giving access to a pro REPL for testing you code(typeorm, packages, libs, functions etc..)",
   "main": "./index.js",
   "bin": {
