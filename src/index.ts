@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import repl from 'repl';
 import { loadConfig } from './loaders/config';
 import config from './nconfig.json';
@@ -7,7 +5,6 @@ import config from './nconfig.json';
 loadConfig(config).then(() => {
   const startRepl = async () => {
     const myRepl = repl.start('> ');
-    myRepl.context.TestClass = (await import('./TestClass')).TestClass;
 
   };
 
