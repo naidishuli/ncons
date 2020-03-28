@@ -3,7 +3,6 @@
 import repl from 'repl';
 import { loadConfig } from './loaders/config';
 import config from './nconfig.json';
-import { load } from 'dotenv';
 
 loadConfig(config).then(() => {
   const startRepl = async () => {
