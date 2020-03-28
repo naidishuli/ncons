@@ -2,16 +2,18 @@
   "name": "ncons",
   "version": "1.0.2",
   "description": "ncons boost your productivity by giving access to a pro REPL for testing you code(typeorm, packages, libs, functions etc..)",
-  "main": "./index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "ncons": "node -r ts-node/register --experimental-repl-await ./src/index.ts"
+    "ncons": "dist/index.js"
   },
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run build",
-    "build": "npm run build-tsc",
-    "build-tsc": "tsc",
-    "console": "node -r ts-node/register --experimental-repl-await ./src/index.ts"
+    "build": "rimraf dist && tsc"
   },
   "repository": {
     "type": "git",
@@ -41,11 +43,12 @@
     "glob": "^7.1.6",
     "ts-node": "^8.8.1",
     "typeorm": "^0.2.22",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
-    "ts-node": "^8.8.1",
+    "ts-node": "^8.4.1",
     "typeorm": "^0.2.22",
-    "typescript": "^3.8.3"
+    "typescript": "^3.6.3"
   }
 }
